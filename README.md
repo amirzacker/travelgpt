@@ -5,11 +5,13 @@ TravelGPT est une application web interactive qui utilise l'intelligence artific
 
 ## Fonctionnalités
 
-- **Interface de chat** pour interagir avec l'assistant de voyage
+- **Chat interactif** avec un assistant voyage AI
 - **Génération d'itinéraires** personnalisés selon vos préférences
-- **Visualisation cartographique** des destinations proposées
+- **Visualisation cartographique** des destinations proposées avec marqueurs détaillés
 - **Génération d'images** des lieux à visiter
-- **Informations météo** pour chaque destination
+- **Comparaison de prix** vols/hôtels en temps réel
+- **Météo intégrée** avec prévisions sur 5 jours
+- **Export rapport multi-formats** (PDF professionnel, CSV, JSON)
 - **Recommandations d'activités** adaptées à vos centres d'intérêt
 
 ## Technologies utilisées
@@ -18,7 +20,7 @@ TravelGPT est une application web interactive qui utilise l'intelligence artific
 - **Génération d'images**: Stable Diffusion pour la visualisation des destinations
 - **Interface web**: Streamlit pour une application web réactive
 - **Cartographie**: Folium pour l'affichage des cartes interactives
-- **APIs externes**: OpenWeatherMap pour les données météorologiques
+- **APIs externes**: OpenWeatherMap pour les données météorologiques, Amadeus API (prix vols)
 
 ## Installation
 
@@ -36,8 +38,9 @@ pip install -r requirements.txt
 3. Configurez vos clés API:
 Créez un fichier `.env` à la racine du projet:
 ```
-NVIDIA_API_KEY=votre_clé_api_nvidia
-OPENWEATHER_API_KEY=votre_clé_api_openweather
+NVIDIA_API_KEY=lé_api_nvidia
+OPENWEATHER_API_KEY=clé_api_openweather
+AMADEUS_API_KEY=clé_api_amadeus
 ```
 
 4. Lancez l'application:
@@ -64,3 +67,12 @@ L'application est déployée sur:
 - Modèles AI: NVIDIA NGC Catalog (https://catalog.ngc.nvidia.com/)
 - Données cartographiques: OpenStreetMap
 - Données météo: OpenWeatherMap
+- Données de prix: Amadeus API
+- Images: Stability AI
+
+
+© 2024 TravelGPT Pro - Réinventons le voyage ensemble
+
+AMIR MAHAMAT SAlEH
+```
+
