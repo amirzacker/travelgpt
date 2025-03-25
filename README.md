@@ -1,4 +1,5 @@
 # TravelGPT - Assistant de Voyage Intelligent
+https://travel-pro.streamlit.app/
 
 ## Description
 TravelGPT est une application web interactive qui utilise l'intelligence artificielle pour aider les utilisateurs à planifier leurs voyages. L'application permet de discuter naturellement avec un assistant virtuel qui peut suggérer des destinations, créer des itinéraires personnalisés, et fournir des informations pratiques sur les lieux à visiter.
@@ -52,7 +53,7 @@ streamlit run app.py
 
 L'application est déployée sur:
 
-- **Streamlit Cloud**: Pour un déploiement rapide et gratuit
+- **Streamlit Cloud**: Pour un déploiement rapide et gratuit https://travel-pro.streamlit.app/
 
 ## Utilisation
 
