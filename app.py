@@ -134,8 +134,13 @@ import io  # Ajouter en haut du fichier
 
 def create_pdf(itinerary: dict):
     pdf = FPDF()
+
+    # Ajout des polices Unicode (à adapter selon votre chemin)
+    pdf.add_font('DejaVu', '', 'fonts/DejaVuSans.ttf', uni=True)
+    pdf.add_font('DejaVu', 'B', 'fonts/DejaVuSans-Bold.ttf', uni=True)
+
     pdf.add_page()
-    pdf.set_font("Helvetica", size=12)
+    pdf.set_font("DejaVu", size=12)
 
     # Titre
     pdf.set_font_size(16)
@@ -145,9 +150,9 @@ def create_pdf(itinerary: dict):
     # Contenu des jours
     pdf.set_font_size(12)
     for day in itinerary['days']:
-        pdf.set_font(style='B')
+        pdf.set_font('DejaVu', 'B')  # Style gras avec police Unicode
         pdf.cell(0, 10, f"Jour {day['number']}: {day['title']}", 0, 1)
-        pdf.set_font(style='')
+        pdf.set_font('DejaVu', '')  # Retour au style normal
         pdf.multi_cell(0, 8, day['description'].replace('\n', ' '))
         pdf.ln(5)
 
@@ -218,7 +223,7 @@ if prompt := st.chat_input("Destination de rêve 🌍 Paris, Tokyo..."):
                 model="meta/llama3-70b-instruct",
                 messages=[
                     {"role": "system", "content": f"""
-                    Générez un itinéraire détaillé STRUCTURÉ avec ce format EXACT pour {days} jours :
+                    Générez un itinéraire détaillé STRUCTURÉ en francais avec ce format EXACT pour {days} jours :
 
                     Jour 1: [Titre du jour]
                     - [Activité matin]
